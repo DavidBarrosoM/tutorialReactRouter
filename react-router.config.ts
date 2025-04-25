@@ -3,5 +3,8 @@ import type { Config } from "@react-router/dev/config";
 export default {
   // Config options...
   // Server-side render by default, to enable SPA mode set this to `false`
-  ssr: true,
+  //ssr: true,
+  async prerender(){//mejor SEO
+    return["/","/about","/personal-info","/finances"];
+  }
 } satisfies Config;
